@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         imageView.setImageBitmap(bitmap);
         long lastTime = System.currentTimeMillis();
         Bitmap out = LowPoly.generate(bitmap, 120);
-        Log.d("TAG", "用时:" + (System.currentTimeMillis() - lastTime) / 1000 + "s");
+        Log.d("TAG", "用时:" + (System.currentTimeMillis() - lastTime)  + "ms");
         imageView.setImageBitmap(out);
     }
 }
