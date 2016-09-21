@@ -1,5 +1,8 @@
-## LowPoly
-This library is a tool for generating low poly photo.`LowPoly` is implemented by `JNI`, so it's faster than other in java.
+## LowPoly:A Tool for Generating Low Poly Photo
+
+![](https://img.shields.io/badge/Android%20Arsenal-LowPoly-green.svg?style=true)
+
+`LowPoly` is implemented by `JNI`, so it's much faster than other in java.
 
 Like this:
 
@@ -19,7 +22,7 @@ There are two ways:
  
  ```gradle
  
- compile 'com.uniquestudio:lowpoly:1.0.0'
+ compile 'com.uniquestudio:lowpoly:1.0.1'
  
  ```
 
@@ -29,10 +32,14 @@ There are two ways:
  
  
  ```java
- Bitmap out = LowPoly.generate(Bitmap bitmap, int blur);
+ Bitmap out = LowPoly.generate(Bitmap bitmap, int gradientThresh);
  ```
  
- Larger the param `blur` is, the `out` bitmap is more abstract. 
+ Larger the param `gradientThresh` is, more abstract the `out` bitmap is . 
+ 
+## Tips
+To avoid out of memory,you can resize the input bitmap using `BitmapFactory.Options.inSampleSize`
+.
  
 ## License
  
