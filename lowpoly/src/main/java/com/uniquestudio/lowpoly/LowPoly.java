@@ -19,10 +19,10 @@ public class LowPoly {
 
     /**
      * @param input
-     * @param blur
-     * @return
+     * @param gradientThresh
+     * @return low poly bitmap
      */
-    public static Bitmap generate(Bitmap input, int blur) {
+    public static Bitmap generate(Bitmap input, int gradientThresh) {
         int width = input.getWidth();
         int height = input.getHeight();
         Bitmap newImage = Bitmap.createBitmap(input.getWidth(), input.getHeight(), Bitmap.Config.ARGB_8888);
@@ -33,7 +33,7 @@ public class LowPoly {
         int x1, x2, x3, y1, y2, y3;
         int pixels[] = new int[width * height];
         input.getPixels(pixels,0,width,0,0,width,height);
-        int[] triangles = getTriangles(pixels, width, height, blur);
+        int[] triangles = getTriangles(pixels, width, height,gradientThresh);
         for (int i = 0; i < triangles.length; i = i + 6) {
             x1 = triangles[i];
             y1 = triangles[i + 1];

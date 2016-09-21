@@ -28,6 +28,6 @@ publish {
     userOrg = 'coxier'
     groupId = 'com.uniquestudio'
     artifactId = 'lowpoly'
-    publishVersion = '1.0.0'
+    publishVersion = '1.0.1'
     website = 'https://github.com/CoXier/LowPoly'
 }
