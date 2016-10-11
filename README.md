@@ -22,7 +22,7 @@ There are two ways:
  
  ```gradle
  
- compile 'com.uniquestudio:lowpoly:1.0.1'
+ compile 'com.uniquestudio:lowpoly:1.0.2'
  
  ```
 
